@@ -3,11 +3,11 @@ import './css/Content.css';
 
 class Content extends Component {
   render() {
+    const { body } = this.props;
+
     return (
       <div className="Content">
-        <h1>Esta parte es el contenido</h1>
-
-        <p>Lorem ipsum....</p>
+        {body}
       </div>
     );
   }
