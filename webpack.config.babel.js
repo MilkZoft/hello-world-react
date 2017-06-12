@@ -20,7 +20,7 @@ const getEntry = () => {
   if (isDevelopment) {
     entry.push('webpack-hot-middleware/client?reload=true');
   }
-  console.log(entry);
+
   return entry;
 };
 const getOutput = () => ({
