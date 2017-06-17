@@ -6,6 +6,9 @@ import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import open from 'open';
 
+// API
+import blogApi from './api/blog';
+
 // Webpack Configuration
 import webpackConfig from '../../webpack.config.babel';
 
@@ -28,6 +31,9 @@ if (isDevelopment) {
   app.use(webpackDevMiddleware(webpackCompiler));
   app.use(webpackHotMiddleware(webpackCompiler));
 }
+
+// API dispatch
+app.use('/api/blog', blogApi);
 
 // Sending all the traffic to React
 app.get('*', (req, res) => {
