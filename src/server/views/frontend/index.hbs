@@ -1,3 +1,4 @@
+{{#compress}}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,9 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>React App</title>
   </head>
+
   <body>
     <div id="root"></div>
+
+    <script>
+        // Initial State
+        const initialState = {
+            device: {
+                isMobile: '{{{ isMobile }}}'
+            }
+        };
+
+        window.initialState = initialState;
+    </script>
     <script src="/vendor.bundle.js"></script>
     <script src="/main.bundle.js"></script>
   </body>
 </html>
+{{/compress}}
