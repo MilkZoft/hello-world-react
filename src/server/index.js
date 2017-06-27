@@ -7,6 +7,9 @@ import webpackHotMiddleware from 'webpack-hot-middleware';
 import open from 'open';
 import exphbs from 'express-handlebars';
 
+// Config
+import config from '../config';
+
 // Webpack Configuration
 import webpackConfig from '../../webpack.config.babel';
 
@@ -20,9 +23,6 @@ import * as hbsHelper from '../lib/handlebars';
 // Utils
 import { isMobile } from '../lib/utils/device';
 
-// Server Port
-const port = 3000;
-
 // Environment
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
@@ -33,14 +33,14 @@ const app = express();
 app.use(express.static(path.join(__dirname, '../public')));
 
 // Handlebars setup
-app.engine('.hbs', exphbs({
-  extname: '.hbs',
+app.engine(config.views.engine, exphbs({
+  extname: config.views.extension,
   helpers: hbsHelper
 }));
 
 // View Engine Setup
-app.set('views', path.join(__dirname, './views'));
-app.set('view engine', '.hbs');
+app.set('views', path.join(__dirname, config.views.path));
+app.set('view engine', config.views.engine);
 
 // Webpack Compiler
 const webpackCompiler = webpack(webpackConfig);
@@ -69,8 +69,8 @@ app.get('*', (req, res) => {
 });
 
 // Listen port 3000
-app.listen(port, err => {
+app.listen(config.serverPort, err => {
   if (!err) {
-    open(`http://localhost:${port}`);
+    open(`${config.baseUrl}`);
   }
 });

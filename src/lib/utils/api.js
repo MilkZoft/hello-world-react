@@ -10,7 +10,7 @@ export function apiEndpoint(endpoint, qs) {
   if (qs) {
     query = `?${qs}`;
   }
-  console.log(`${config.api.url}${endpoint}${query}`);
+
   return `${config.api.url}${endpoint}${query}`;
 }
 
