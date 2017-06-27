@@ -1,0 +1,34 @@
+{
+  "response": [
+    {
+      "id": 1,
+      "title": "El Señor de los Anillos",
+      "author": "J. R. R. Tolkien",
+      "image": "https://imagessl7.casadellibro.com/a/l/t0/87/9788445000687.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Padre Rico Padre Pobre",
+      "author": "Robert Kiyosaki",
+      "image": "https://imagessl2.casadellibro.com/a/l/t0/02/9788466317702.jpg"
+    },
+    {
+      "id": 3,
+      "title": "El Tao de Warren Buffett",
+      "author": "Mary Buffett",
+      "image": "https://imagessl6.casadellibro.com/a/l/t0/56/9788493562656.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Burlar al Diablo. Secretos desde la Cripta",
+      "author": "Napoleon Hill",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/41DcYrw4upL._SX311_BO1,204,203,200_.jpg"
+    },
+    {
+      "id": 5,
+      "title": "El Alquimista",
+      "author": "Paulo Coelho",
+      "image": "http://libros-gratis.com/wp-content/uploads/2015/12/el-alquimista.jpg"
+    }
+  ]
+}
