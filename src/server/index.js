@@ -12,6 +12,7 @@ import webpackConfig from '../../webpack.config.babel';
 
 // API
 import blogApi from './api/blog';
+import libraryApi from './api/library';
 
 // Helpers
 import * as hbsHelper from '../lib/handlebars';
@@ -58,6 +59,7 @@ app.use((req, res, next) => {
 
 // API dispatch
 app.use('/api/blog', blogApi);
+app.use('/api/library', libraryApi);
 
 // Sending all the traffic to React
 app.get('*', (req, res) => {
